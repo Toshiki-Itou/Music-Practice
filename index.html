@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="js/script.js"></script>
+<meta charset="UTF-8">
+<title>メトロノーム</title>
+</head>
+<body>
+	<audio id="sound_s" src="se/metro_s.wav" preload="auto"></audio>
+	<audio id="sound_w" src="se/metro_w.wav" preload="auto"></audio>
+	<nav id="bpmsetting">
+		<ul>
+			<li class="minus">
+				<input id="-10" type="button" value="-10" class="btn">
+				<input id="-1" type="button" value="-1" class="btn">
+			</li>
+			<li class="plus">
+				<input id="+1" type="button" value="+1" class="btn">
+				<input id="+10" type="button" value="+10" class="btn">
+			</li>
+		</ul>
+	</nav>
+	<div class="bpmbox">
+		<p>BPM:</p>
+		<p class="bpm">100</p>
+	</div>
+	<div class="bpbbox">
+		<p>Beats Per Bar:</p>
+		<input type="number" value="4" id="bpb" class="box" min="2" max="16">拍
+	</div>
+	<form id="timer">
+		<input type="number" value="0" id="min" class="box" min="0">分
+		<input type="number" value="0" id="sec" class="box" min="0">秒
+	</form>
+	<input id="bpmstart" type="button" value="再生" class="btn">
+</body>
+</html>
